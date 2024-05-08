@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+
+<style>
+#container {
+ width: 400px;
+ height: 400px;
+ position:relative;
+ background: yellow;
+}
+#animate {
+<image src="shlok1.jpg" width="200px" height="200px">
+
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p>
+
+<div id="container">
+<div id="animate">
+<image src="shlok.jfif" width="200px" height="200px">
+</div>
+</div>
+
+<script>
+function myMove(){
+ var elem=document.getElementById("animate");
+ var pos = 0;
+ var id = setInterval(frame);
+
+function frame() {
+   if(pos==350){
+   clearInterval(id);
+   } else {
+   pos++;
+  elem.style.top=pos + "px";
+  elem.style.left =pos + "px";
+  }
+ }
+}
+</script>
+
+</body>
+</html>
+
+
+
